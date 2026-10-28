@@ -12,6 +12,21 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored React Bits components, kept as close to upstream as possible.
+    "components/AnimatedContent.tsx",
+    "components/BlurText.tsx",
+    "components/CountUp.tsx",
+    "components/Counter.tsx",
+    "components/Dither.tsx",
+    "components/FadeContent.tsx",
+    "components/GlassSurface.tsx",
+    "components/Grainient.tsx",
+    "components/Magnet.tsx",
+    "components/PillNav.tsx",
+    "components/ScrollReveal.tsx",
+    "components/SplitText.tsx",
+    "components/StatusMark.tsx",
+    "components/WarmTooltip.tsx",
   ]),
 ]);
 
