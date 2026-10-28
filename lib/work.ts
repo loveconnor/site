@@ -21,7 +21,7 @@ export type Project = {
 };
 
 // Case studies stay factual: role and status are shown exactly as they stand today.
-// Client workspace screens are taken from the live demo at demo.connorlove.com (fictional data).
+// Client workspace screens are taken from the live demo at demo.moirel.com (fictional data).
 export const projects: Project[] = [
   {
     slug: "client-workspace",
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     label: "Studio-built tool",
     role: "Product design and development",
     status: "In use for studio engagements",
-    live: { href: "https://demo.connorlove.com", label: "Live demo" },
+    live: { href: "https://demo.moirel.com", label: "Live demo" },
     summary:
       "A shared place for requests, progress, approvals, and files. Built to make the next step of a project easier to understand.",
     cta: "See the workspace",
