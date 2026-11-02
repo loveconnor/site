@@ -1,7 +1,8 @@
 export const site = {
   name: "Moirel",
   legalName: "Moirel Studio",
-  url: "https://moirel.com",
+  // The www host is the one Vercel serves; the bare domain redirects to it.
+  url: "https://www.moirel.com",
   email: "connor@connorlove.com",
   signature: "Patterned by design. Engineered to ship.",
   founder: "Connor Love",

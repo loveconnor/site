@@ -5,15 +5,17 @@ import { site } from "@/lib/site";
 // and a page that sets its own openGraph drops it, so each page names it here.
 const shareImage = { url: "/opengraph-image", width: 1200, height: 630, alt: "Moirel Studio: websites that explain your business, software that helps run it." };
 
+export const homeTitle = `${site.legalName} | Custom Web Design and Development`;
+
 export const homeDescription =
-  "Custom websites, product interfaces, and useful software by Connor Love. Explore project builds, monthly studio capacity, and site care.";
+  "Independent web design and development studio. Custom websites, product interfaces, and useful software by Connor Love, working with clients remotely.";
 
 /**
  * Title, description, canonical URL and share card for one page. A page's openGraph
  * replaces the layout's rather than merging with it, so every field is set here.
  */
 export function pageMetadata({ title, description, path }: { title?: string; description: string; path?: string }): Metadata {
-  const shareTitle = title ? `${title} | ${site.legalName}` : `${site.legalName} | Web Design and Development by ${site.founder}`;
+  const shareTitle = title ? `${title} | ${site.legalName}` : homeTitle;
   return {
     ...(title && { title }),
     description,

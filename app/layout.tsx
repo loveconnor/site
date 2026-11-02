@@ -7,7 +7,7 @@ import { Intro } from "@/components/intro";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { CursorLabel } from "@/components/cursor-label";
 import { PageTransition } from "@/components/page-transition";
-import { homeDescription, pageMetadata } from "@/lib/metadata";
+import { homeDescription, homeTitle, pageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -26,10 +26,25 @@ const mono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Moirel Studio | Web Design and Development by Connor Love",
+    default: homeTitle,
     template: "%s | Moirel Studio",
   },
   ...pageMetadata({ description: homeDescription }),
+};
+
+// Tells search engines what the business is and where. Static values only, so no escaping is needed.
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: site.legalName,
+  url: site.url,
+  email: site.email,
+  description: homeDescription,
+  image: `${site.url}/opengraph-image`,
+  address: { "@type": "PostalAddress", addressLocality: "Columbus", addressRegion: "OH", addressCountry: "US" },
+  founder: { "@type": "Person", name: site.founder, url: site.portfolioUrl },
+  sameAs: [site.portfolioUrl, site.githubUrl],
+  knowsAbout: ["Web design", "Web development", "Web applications"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -40,6 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sans.variable} ${mono.variable} antialiased`}
     >
       <body className="min-h-dvh">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }} />
         <Intro />
         <SmoothScroll />
         <div className="relative">

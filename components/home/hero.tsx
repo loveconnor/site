@@ -49,7 +49,7 @@ export function Hero() {
               />
               <FadeContent trigger="mount" delay={1.2} duration={0.8} className="md:col-span-3 md:col-start-7">
                 <p className="text-[14px] leading-relaxed text-paper/55">
-                  Independent design and development studio
+                  Independent web design and development studio
                   <br />
                   Columbus, Ohio
                 </p>

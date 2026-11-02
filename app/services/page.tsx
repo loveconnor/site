@@ -7,9 +7,9 @@ import { ClosingCta } from "@/components/closing-cta";
 import { inquiryHref } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Services",
+  title: "Web Design and Development Services",
   description:
-    "Website design and development, web applications and tools, and ongoing design and development capacity from Moirel Studio.",
+    "Website design and development, web applications, and ongoing design and development capacity from Moirel Studio. Website builds from $4,500.",
   path: "/services",
 });
 
@@ -68,7 +68,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Design and development around the work you need to do."
-        intro="Moirel brings structure, interface design, and development together. Whether the goal is a clearer website or a tool that makes everyday work easier, we start by understanding what people need from it."
+        intro="Moirel is an independent web design and development studio working with clients remotely. Whether the goal is a clearer website or a tool that makes everyday work easier, we start by understanding what people need from it."
       />
 
       {services.map((service, i) => (

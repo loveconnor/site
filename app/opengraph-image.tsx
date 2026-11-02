@@ -40,7 +40,7 @@ export default async function OpengraphImage() {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 26, color: "rgba(246,244,239,0.7)" }}>
           <span>Design and development by {site.founder}</span>
-          <span>{site.url.replace("https://", "")}</span>
+          <span>{site.url.replace("https://www.", "")}</span>
         </div>
       </div>
     ),
